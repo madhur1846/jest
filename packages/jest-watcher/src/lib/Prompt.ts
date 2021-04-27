@@ -78,6 +78,12 @@ export default class Prompt {
         this._onCancel(this._value);
         this.abort();
         break;
+      case KEYS.CONTROL_U:
+        this._value = "";
+        this._offset = -1;
+        this._selection = null;
+        this._onChange();
+        break;
       case KEYS.ARROW_DOWN:
         this._offset = Math.min(this._offset + 1, this._promptLength - 1);
         this._onChange();
