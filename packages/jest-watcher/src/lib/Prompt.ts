@@ -78,6 +78,7 @@ export default class Prompt {
         this._onCancel(this._value);
         this.abort();
         break;
+        
       case KEYS.CONTROL_U:
         this._value = "";
         this._offset = -1;
